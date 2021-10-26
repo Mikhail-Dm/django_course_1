@@ -1,9 +1,6 @@
 # Editors
 .idea/
 
-# Windows
-Thumbs.db
-
 # Source for the following rules:
 __pycache__/
 
@@ -12,6 +9,4 @@ __pycache__/
 .venv
 env/
 venv/
-ENV/
-env.bak/
-venv.bak/
+.vscode/
