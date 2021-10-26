@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="867468ba-7735-44db-8c7e-69084b1d85c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/geekshop/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/geekshop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/geekshop/geekshop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/geekshop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/geekshop/geekshop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/migrations/0002_product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/templates/mainapp/includs/inc_main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/templates/mainapp/includs/inc_main_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3/geekshop/mainapp/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1zrOMIDqkJpp82P3hUWROJkrRdV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+    <property name="settings.editor.splitter.proportion" value="0.27619982" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lesson_3/geekshop" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="867468ba-7735-44db-8c7e-69084b1d85c4" name="Changes" comment="" />
+      <created>1634902691613</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634902691613</updated>
+    </task>
+    <servers />
+  </component>
+</project>
