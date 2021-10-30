@@ -29,6 +29,19 @@ class ShopUserRegisterForm(UserCreationForm):
         data = self.cleaned_data['age']
         if data > 100:
             raise forms.ValidationError('Со всем почтением Ваш возраст слишком велик.')
+        return data
+
+    def clean_username(self):
+        data = self.cleaned_data['username']
+        if len(data) > 24:
+            raise forms.ValidationError('Слишком длинный ник.')
+        return data
+
+    def clean_first_name(self):
+        data = self.cleaned_data['first_name']
+        if len(data) > 24:
+            raise forms.ValidationError('Слишком длинное имя.')
+        return data
 
 
 class ShopUserEditForm(UserChangeForm):
