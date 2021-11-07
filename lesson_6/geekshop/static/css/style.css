@@ -96,7 +96,7 @@ html, body {
 }
 
 .products_list {
-    margin-left: 8vh;
+    margin-left: 10vh;
 }
 
 .products_list .new_product {
@@ -384,6 +384,10 @@ html, body {
     width: 700px;
 }
 
+.basket_list {
+    margin: 0 10px;
+}
+
 .basket_list input[type="number"] {
     width: 3em;
     position: relative;
@@ -444,7 +448,7 @@ html, body {
 }
 
 .basket_list button {
-    margin-left: 45px;
+    margin: 20px auto 0;
     width: 150px;
     display: block;
     float: left;
@@ -520,16 +524,10 @@ html, body {
 .category-products .block a img {
 	float: left;
 }
-
-.img-block {
-    height:100%;
-    width:100%;
-}
-
 .category-products .block {
 	float: left;
 	margin-right: 30px;
-	margin-bottom: 30px;
+	margin-top: 30px;
 	display: block;
 	height: 370px;
 	width: 370px;
@@ -581,16 +579,17 @@ html, body {
     border: 1px solid #eaeaea;
     border-radius: 25px;
     overflow: hidden;
-    width: 28em;
+    width: 48em;
     min-width: 500px;
-    margin: 100px auto;
+    margin: 80px auto;
+    padding: 20px;
        
     position: relative;
     display: block;
 }
 
 .login .head {
-    margin: 15px auto;
+    margin: 15px auto 40px;
 }
 
 .login .form-control[type="submit"] {
@@ -706,7 +705,7 @@ html, body {
 	background-image: url(/static/img/basket.png);
 	position: absolute;
 	top: 63px;
-	left: 1230px;
+	left: 1225px;
     text-decoration: none;
     color: #555;
 }

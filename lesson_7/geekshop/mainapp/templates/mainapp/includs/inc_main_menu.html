@@ -31,4 +31,13 @@
 <a href="#" class="search"></a>
 
 <!--Корзина-->
-<a href="{% url 'basket:basket' %}" class="basket"><span style="color:red;">+{{ basket.count }}</span></a>
+<a href="{% url 'basket:basket' %}" class="basket">
+    <span style="color:red;">
+        {% if user.is_authenticated %}
+            {% if basket %}
+                {{ basket.0.total_cost|floatformat:1 }} руб. <br>
+                {{ basket.0.total_quantity }} шт.
+            {% endif %}
+        {% endif %}
+    </span>
+</a>

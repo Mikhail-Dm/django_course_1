@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from basketapp import views as basket
 
 
@@ -8,4 +8,5 @@ urlpatterns = [
     path('', basket.basket, name="basket"),
     path('add/<int:pk>/', basket.add, name="add"),
     path('remove/<int:pk>/', basket.remove, name="remove"),
+    path('edit/<int:pk>/<int:quantity>/', basket.edit, name="edit")
 ]
