@@ -34,7 +34,11 @@
 
                     <button>
                         <a href="{% url 'adminapp:product_delete' object.pk %}">
-                            удалить
+                            {% if object.is_active %}
+                                удалить
+                            {% else %}
+                                восстановить
+                            {% endif %}
                         </a>
                     </button>
                 </div>

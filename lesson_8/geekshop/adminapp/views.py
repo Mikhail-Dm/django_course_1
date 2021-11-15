@@ -11,6 +11,18 @@ from authapp.models import ShopUser
 from mainapp.models import Product, ProductCategory
 
 
+class AccessMixin:
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+class UsersListView(AccessMixin, ListView):
+    model = ShopUser
+    template_name = 'adminapp/users.html'
+
+
+
 @user_passes_test(lambda u:u.is_superuser)
 def user_create(request):
     if request.method == 'POST':
@@ -24,23 +36,6 @@ def user_create(request):
         'form': user_form
     }
     return render(request, 'adminapp/user_form.html', context)
-
-
-# @user_passes_test(lambda u:u.is_superuser)
-# def users(request):
-#     context = {
-#         'object_list': ShopUser.objects.all().order_by('-is_active')
-#     }
-#     return render(request, 'adminapp/users.html', context)
-
-class UsersListView(ListView):
-    model = ShopUser
-    template_name = 'adminapp/users.html'
-
-    @method_decorator(user_passes_test(lambda u: u.is_superuser))
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
-
 
 @user_passes_test(lambda u:u.is_superuser)
 def user_update(request, pk):
@@ -56,7 +51,6 @@ def user_update(request, pk):
         'form': user_form
     }
     return render(request, 'adminapp/user_form.html', context)
-
 
 @user_passes_test(lambda u:u.is_superuser)
 def user_delete(request, pk):
@@ -74,14 +68,12 @@ def user_delete(request, pk):
     }
     return render(request, 'user_delete.html', context)
 
-
 @user_passes_test(lambda u:u.is_superuser)
 def category_create(request):
     context = {
 
     }
     return render(request, '', context)
-
 
 @user_passes_test(lambda u:u.is_superuser)
 def categories(request):
@@ -91,14 +83,12 @@ def categories(request):
     }
     return render(request, 'adminapp/categories.html', content)
 
-
 @user_passes_test(lambda u:u.is_superuser)
 def category_update(request):
     context = {
 
     }
     return render(request, '', context)
-
 
 @user_passes_test(lambda u:u.is_superuser)
 def category_delete(request):
@@ -108,14 +98,8 @@ def category_delete(request):
     return render(request, '', context)
 
 
-# @user_passes_test(lambda u:u.is_superuser)
-# def product_create(request):
-#     context = {
-#
-#     }
-#     return render(request, '', context)
 
-class ProductCreateView(CreateView):
+class ProductCreateView(AccessMixin, CreateView):
     model = Product
     template_name = 'adminapp/product_form.html'
     # fields = '__all__'
@@ -125,17 +109,7 @@ class ProductCreateView(CreateView):
         return reverse('adminapp:product_list', args=[self.kwargs['pk']])
 
 
-# @user_passes_test(lambda u:u.is_superuser)
-# def products(request, pk):
-#     category = get_object_or_404(ProductCategory, pk=pk)
-#     products_list = Product.objects.filter(category__pk=pk).order_by('name')
-#     content = {
-#         'category': category,
-#         'objects': products_list,
-#     }
-#     return render(request, 'adminapp/products.html', content)
-
-class ProductsViewList(ListView):
+class ProductsViewList(AccessMixin, ListView):
     model = Product
     template_name = 'adminapp/products.html'
 
@@ -148,15 +122,7 @@ class ProductsViewList(ListView):
         return Product.objects.filter(category__pk=self.kwargs.get('pk'))
 
 
-
-# @user_passes_test(lambda u:u.is_superuser)
-# def product_update(request):
-#     context = {
-#
-#     }
-#     return render(request, '', context)
-
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(AccessMixin, UpdateView):
     model = Product
     template_name = 'adminapp/product_form.html'
     form_class = ProductEditForm
@@ -166,14 +132,7 @@ class ProductUpdateView(UpdateView):
         return reverse('adminapp:product_list', args=[product_item.category_id])
 
 
-# @user_passes_test(lambda u:u.is_superuser)
-# def product_delete(request):
-#     context = {
-#
-#     }
-#     return render(request, '', context)
-
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(AccessMixin, DeleteView):
     model = Product
     template_name = 'adminapp/product_delete.html'
 
@@ -182,9 +141,6 @@ class ProductDeleteView(DeleteView):
         return reverse('adminapp:product_list', args=[product_item.category_id])
 
 
-@user_passes_test(lambda u:u.is_superuser)
-def product_detail(request):
-    context = {
-
-    }
-    return render(request, '', context)
+class ProductDetailView(AccessMixin, DetailView):
+    model = Product
+    template_name = 'adminapp/product_detail.html'
