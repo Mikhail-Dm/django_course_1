@@ -13,7 +13,7 @@
            class="{% if 'category' in request.resolver_match.url_name or category.name %}active{% endif %}">
                 категории
                 {% if category %}
-                    :<span>{{ category.name }}</span>
+                    : <span>{{ category.name }}</span>
                 {% endif %}
         </a>
     </li>

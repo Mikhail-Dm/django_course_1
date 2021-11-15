@@ -4,7 +4,7 @@
 	padding: 0;
 }
 
-body {
+body {new_product
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -100,7 +100,7 @@ html, body {
 }
 
 .products_list .new_product {
-    margin-left: 150px;
+    margin-left: 140px;
 }
 
 .products_list button {
